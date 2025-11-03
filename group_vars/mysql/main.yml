@@ -1,2 +1,25 @@
-MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm','/roboshop/mysql/mysql_root_password',
+MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm','/roboshop/{{ environment }}/mysql/mysql_root_password',
   region='us-east-1', decrypt=True ) }}"
+
+
+
+
+
+
+# paramter store value
+# {
+#   "Version": "2012-10-17",
+#   "Statement": [
+#     {
+#       "Sid": "ReadParameterStoreAccess",
+#       "Effect": "Allow",
+#       "Action": [
+#         "ssm:GetParameter",
+#         "ssm:GetParameters",
+#         "ssm:GetParametersByPath",
+#         "ssm:DescribeParameters"
+#       ],
+#       "Resource":"arn:aws:ssm:*:*:parameter/*"
+#     }
+#   ]
+# }
