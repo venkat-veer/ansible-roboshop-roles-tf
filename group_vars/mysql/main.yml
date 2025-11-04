@@ -6,7 +6,7 @@ MYSQL_ROOT_PASSWORD: "{{ lookup('amazon.aws.aws_ssm','/roboshop/{{ env }}/mysql/
 
 
 
-# paramter store value
+# paramter store value      for ssm parameter store value in AWS ok  google it 
 # {
 #   "Version": "2012-10-17",
 #   "Statement": [
