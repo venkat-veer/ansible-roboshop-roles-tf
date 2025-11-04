@@ -1,1 +1,1 @@
-MONGODB_HOST: mongodb.devaws.store
+MONGODB_HOST: mongodb-{{ env }}.devaws.store    # it has high priority compare to common variables ok
